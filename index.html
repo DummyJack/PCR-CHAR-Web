@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#477e79"><title>公主連結角色持有表</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="compact.css"></head>
+<body>
+<header><h1>公主連結角色持有一覽表</h1></header>
+<main>
+<div class="display-tools"><div class="mode-buttons" role="group" aria-label="操作模式"><button id="mode-owned" class="active" aria-pressed="true">✓ 標記持有</button><button id="mode-edit" aria-pressed="false">✎ 養成編輯</button></div><div class="avatar-size-control" role="group" aria-label="頭像大小"><span>頭像</span><button type="button" data-avatar-size="small" aria-pressed="false">小</button><button type="button" data-avatar-size="medium" class="active" aria-pressed="true">中</button><button type="button" data-avatar-size="large" aria-pressed="false">大</button></div><button id="export-image">產出圖片</button><button id="preview-image-button">預覽圖片</button><button id="clear-records" type="button">清除資料</button></div>
+<section class="workspace" aria-label="角色收藏管理">
+<div id="grid" class="grid"></div><div id="empty" hidden><h3>找不到符合條件的角色</h3><p>試試其他名稱，或重設篩選條件。</p></div>
+</section>
+</main>
+<dialog id="editor"><form id="record-form"><div class="dialog-heading"><h2 id="editor-name"></h2><button type="button" id="close-editor" aria-label="關閉">×</button></div><div class="fields"><label>目前星數<select name="stars"><option value="">尚未填寫</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label><label class="weapon-owned-label" id="unique-weapon-fields" hidden><input type="checkbox" name="weaponOwned"> 已持有專武</label><label id="weapon-level-field" hidden>專武等級<input name="weapon" type="number" min="0" max="999" placeholder="尚未填寫"></label></div><div class="dialog-footer"><button type="submit" class="primary">儲存</button></div></form></dialog>
+<dialog id="image-preview-dialog" aria-label="公主連結角色持有表圖片預覽"><button type="button" id="close-image-preview" aria-label="關閉預覽">×</button><img id="image-preview" alt="公主連結角色持有一覽表圖片"></dialog>
+<div id="toast" role="status" aria-live="polite"></div><script src="characters.js"></script><script src="my-roster.js"></script><script src="app.js"></script></body></html>
